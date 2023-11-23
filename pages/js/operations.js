@@ -1,3 +1,6 @@
+
+/*Creamos la clase "Calculadora" y agregamos los métodos de las operaciones que tendrán 2 argumentos*/
+
 class Calculator {
     addition(num1, num2) {
         return num1 + num2;
