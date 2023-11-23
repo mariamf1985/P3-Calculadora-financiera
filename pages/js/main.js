@@ -23,13 +23,13 @@ buttons.forEach(button => {
         }
 
         if (button.id === "equal") {  //para que al pusar "=" nos devuelva el resultado
-            
+
             try {
-            display.textContent = eval(display.textContent); //eval evalúa un conjunto de strings que tenga 
-        } catch {                                           //operaciones matemáticas en una soa string sin formato nº.
-            display.textContent = "Error!"; 
-        }
-            return;                                          
+                display.textContent = eval(display.textContent); //eval evalúa un conjunto de strings que tenga 
+            } catch {                                           //operaciones matemáticas en una soa string sin formato nº.
+                display.textContent = "Error!";
+            }
+            return;
         }
 
         if (display.textContent === "0" || display.textContent === "Error!") {//para que se quite el "0" 
