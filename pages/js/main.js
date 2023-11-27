@@ -1,19 +1,16 @@
-//llamamos a la pantalla
-const display = document.querySelector(".display");
 
-//llamamos a los botones
+const display = document.querySelector(".display");
 const buttons = document.querySelectorAll(".btn");
 
-//para que funcionen los botones al hacer click
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        //para que aparezca lo que pulsamos en la pantalla
+
         const pressedButton = button.textContent;
-        if (button.id === "C") {         //para que al pulsar "C" vuelva a "0".
+        if (button.id === "C") {         
             display.textContent = "0";
-            return; //termina la función ejecutada.
+            return; 
         }
-        if (button.id === "delete") {      //para borrar números de uno en uno con la flecha
+        if (button.id === "delete") {      
             if (display.textContent.length === 1 || display.textContent === "Error!") {
                 display.textContent = "0";
             } else {
@@ -22,18 +19,18 @@ buttons.forEach(button => {
             return;
         }
 
-        if (button.id === "equal") {  //para que al pusar "=" nos devuelva el resultado
+        if (button.id === "equal") {  
 
             try {
-                display.textContent = eval(display.textContent); //eval evalúa un conjunto de strings que tenga 
-            } catch {                                           //operaciones matemáticas en una soa string sin formato nº.
+                display.textContent = eval(display.textContent);  
+            } catch {                                           
                 display.textContent = "Error!";
             }
             return;
         }
 
-        if (display.textContent === "0" || display.textContent === "Error!") {//para que se quite el "0" 
-            display.textContent = pressedButton;                              //al introducir números
+        if (display.textContent === "0" || display.textContent === "Error!") {
+            display.textContent = pressedButton;                              
         } else {
             display.textContent += pressedButton;
         }
